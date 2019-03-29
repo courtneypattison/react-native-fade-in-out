@@ -1,37 +1,45 @@
 import React from 'react';
-import {Button, Image, StyleSheet, Text, View} from 'react-native';
+import {Button, Image, StyleSheet, View} from 'react-native';
 import FadeInOut from './FadeInOut';
 
 const icon = require('./assets/cat.png');
 
 export default class App extends React.Component {
   state = {
-    visible: true
+    durationVisible: true,
+    scaleVisible: true,
+    rotateVisible: true,
   };
 
-  toggleVisible = () => {
-    this.setState(prevState => ({visible: !prevState.visible}));
+  toggleDurationVisible = () => {
+    this.setState(prevState => ({durationVisible: !prevState.durationVisible}));
+  }
+
+  toggleScaleVisible = () => {
+    this.setState(prevState => ({scaleVisible: !prevState.scaleVisible}));
+  }
+
+  toggleRotateVisible = () => {
+    this.setState(prevState => ({rotateVisible: !prevState.rotateVisible}));
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Button onPress={this.toggleVisible} title="Start Fade" />
-
-        <Text>Duration = 500</Text>
-        <FadeInOut visible={this.state.visible} duration={500}>
+        <FadeInOut visible={this.state.durationVisible} duration={500}>
           <Image source={icon} />
         </FadeInOut>
+        <Button onPress={this.toggleDurationVisible} title="Duration = 500" />
 
-        <Text>Scale = true</Text>
-        <FadeInOut visible={this.state.visible} scale={true}>
+        <FadeInOut visible={this.state.scaleVisible} scale={true}>
           <Image source={icon} />
         </FadeInOut>
-
-        <Text>Rotate = true</Text>
-        <FadeInOut visible={this.state.visible} rotate={true}>
+        <Button onPress={this.toggleScaleVisible} title="Scale = true" />
+        
+        <FadeInOut visible={this.state.rotateVisible} rotate={true}>
           <Image source={icon} />
         </FadeInOut>
+        <Button onPress={this.toggleRotateVisible} title="Rotate = true" />
       </View>
     );
   }
@@ -43,5 +51,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'space-evenly',
+    padding: 50
   },
 });
