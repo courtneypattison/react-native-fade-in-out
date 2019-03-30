@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FadeInOut should render {opacity: 0} 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "opacity": 0,
+      "transform": Array [
+        Object {
+          "perspective": 1000,
+        },
+      ],
+    }
+  }
+>
+  <Text>
+    Dummy Text
+  </Text>
+</AnimatedComponent>
+`;
+
+exports[`FadeInOut should render {opacity: 1} 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "opacity": 1,
+      "transform": Array [
+        Object {
+          "perspective": 1000,
+        },
+      ],
+    }
+  }
+>
+  <Text>
+    Dummy Text
+  </Text>
+</AnimatedComponent>
+`;
+
+exports[`FadeInOut should render transform with perspective, scale, and rotate 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "opacity": 1,
+      "transform": Array [
+        Object {
+          "perspective": 1000,
+        },
+        Object {
+          "scale": 1,
+        },
+        Object {
+          "rotate": "360deg",
+        },
+      ],
+    }
+  }
+>
+  <Text>
+    Dummy Text
+  </Text>
+</AnimatedComponent>
+`;

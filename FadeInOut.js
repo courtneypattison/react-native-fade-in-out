@@ -27,9 +27,8 @@ export default class FadeInOut extends Component {
 
   componentDidUpdate(prevProps) {
     const {duration} = this.props;
-    const {fadeAnim} = this.state;
   
-    Animated.timing(fadeAnim, {
+    Animated.timing(this.state.fadeAnim, {
         toValue: prevProps.visible ? 0 : 1,
         duration: duration ? duration : DEFAULT_DURATION,
     }).start();
