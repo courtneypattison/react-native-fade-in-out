@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Image, StyleSheet, View} from 'react-native';
-import FadeInOut from './FadeInOut';
+import FadeInOut from 'react-native-fade-in-out';
 
 const icon = require('./assets/cat.png');
 
