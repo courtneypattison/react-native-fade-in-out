@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Animated} from 'react-native';
 
 export const DEFAULT_DURATION = 300;
 
-export default class FadeInOut extends Component {
+export default class FadeInOut extends PureComponent {
   static propTypes = {
     children: PropTypes.node.isRequired,
     visible: PropTypes.bool.isRequired,
@@ -14,36 +14,30 @@ export default class FadeInOut extends Component {
     style: PropTypes.object,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      fadeAnim: new Animated.Value(props.visible ? 1 : 0),
-    };
-  }
-
-  shouldComponentUpdate(nextProps) {
-    return this.props.visible !== nextProps.visible;
-  }
+  state = {
+    fadeAnim: new Animated.Value(this.props.visible ? 1 : 0),
+  };
 
   componentDidUpdate(prevProps) {
     const {duration} = this.props;
-  
-    Animated.timing(this.state.fadeAnim, {
+
+    if (prevProps.visible !== this.props.visible) {
+      Animated.timing(this.state.fadeAnim, {
         toValue: prevProps.visible ? 0 : 1,
         duration: duration ? duration : DEFAULT_DURATION,
-    }).start();
+      }).start();
+    }
   }
 
   render() {
-    const {children, rotate, scale, style} = this.props;
     const {fadeAnim} = this.state;
     const transform = [{perspective: 1000}];
   
-    if (scale) {
+    if (this.props.scale) {
       transform.push({scale: fadeAnim});
     }
 
-    if (rotate) {
+    if (this.props.rotate) {
       transform.push({
         rotate: fadeAnim.interpolate({
           inputRange: [0, 1],
@@ -53,8 +47,8 @@ export default class FadeInOut extends Component {
     }
 
     return (
-      <Animated.View style={{...style, opacity: fadeAnim, transform}}>
-        {children}
+      <Animated.View style={{...this.props.style, opacity: fadeAnim, transform}}>
+        {this.props.children}
       </Animated.View>
     );
   }
