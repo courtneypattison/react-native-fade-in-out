@@ -16,7 +16,7 @@ $ npm i react-native-fade-in-out
 ```
 
 ## Example usage
-```.js
+```jsx
 import React, {Component} from 'react';
 import {Button, Text, StyleSheet, View} from 'react-native';
 import FadeInOut from 'react-native-fade-in-out';
