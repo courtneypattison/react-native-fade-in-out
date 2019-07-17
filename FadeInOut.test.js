@@ -56,16 +56,6 @@ describe('FadeInOut', () => {
     expect(wrapper).toHaveStyle('opacity', getAnimValue(0, 1));
   });
 
-  test('should change opacity from 0 to 1 after custom duration', () => {
-    const duration = 400;
-    const wrapper = getWrapper({visible: false, duration: duration});
-
-    expect(wrapper).toHaveStyle('opacity', new Animated.Value(0));
-    wrapper.setProps({visible: true});
-    jest.advanceTimersByTime(duration);
-    expect(wrapper).toHaveStyle('opacity', getAnimValue(0, 1));
-  });
-
   test('should not change opacity when props stay the same', () => {
     const wrapper = getWrapper({visible: true});
 
