@@ -1,6 +1,6 @@
 {
   "name": "react-native-fade-in-out",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A React Native component that uses a boolean prop to fade children in and out",
   "main": "FadeInOut.js",
   "repository": "https://github.com/courtneypattison/react-native-fade-in-out.git",
