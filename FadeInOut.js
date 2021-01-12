@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Animated} from 'react-native';
 
 export const DEFAULT_DURATION = 300;
+const DEFAULT_USE_NATIVE_DRIVER = true;
 
 export default class FadeInOut extends PureComponent {
   static propTypes = {
@@ -12,6 +13,7 @@ export default class FadeInOut extends PureComponent {
     rotate: PropTypes.bool,
     scale: PropTypes.bool,
     style: PropTypes.object,
+    useNativeDriver: PropTypes.bool,
   };
 
   state = {
@@ -19,12 +21,13 @@ export default class FadeInOut extends PureComponent {
   };
 
   componentDidUpdate(prevProps) {
-    const {duration} = this.props;
+    const {duration, useNativeDriver} = this.props;
 
     if (prevProps.visible !== this.props.visible) {
       Animated.timing(this.state.fadeAnim, {
         toValue: prevProps.visible ? 0 : 1,
         duration: duration ? duration : DEFAULT_DURATION,
+        useNativeDriver: useNativeDriver ? useNativeDriver : DEFAULT_USE_NATIVE_DRIVER
       }).start();
     }
   }

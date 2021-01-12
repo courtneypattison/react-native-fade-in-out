@@ -91,6 +91,16 @@ Adds scaling from %0 to %100 on fade in and %100 to %0 on fade out.
 |:------------------------------|----------|
 | [View styles][view-styles-url]| No       |
 
+### `useNativeDriver`
+By default, we use the native driver for opacity and transform animations. If for some reason
+you need to turn this off, you can do so with this property. The default value is `true`.
+
+| Type       | Required |
+|:-----------|----------|
+| Boolean    | No       |
+
+See [React Native Native Driver blog post][react-native-blog] for more details.
+
 ## License
 
 MIT © [Courtney Pattison][courtney-url]
@@ -106,6 +116,7 @@ MIT © [Courtney Pattison][courtney-url]
 [npm-img]: https://img.shields.io/npm/v/react-native-fade-in-out.svg
 [npm-url]: https://www.npmjs.com/package/react-native-fade-in-out
 
+[react-native-blog]: https://reactnative.dev/blog/2017/02/14/using-native-driver-for-animated#caveats
 [react-native-url]: https://facebook.github.io/react-native/
 
 [travis-img]: https://img.shields.io/travis/courtneypattison/react-native-fade-in-out.svg
