@@ -8,7 +8,8 @@
   "author": "courtneypattison <courtneyp@ttison.ca> (https://courtneypattison.com/)",
   "license": "MIT",
   "files": [
-    "/FadeInOut.js"
+    "/FadeInOut.js",
+    "/FadeInOut.d.ts"
   ],
   "keywords": [
     "fade",
