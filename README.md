@@ -16,30 +16,36 @@ $ npm i react-native-fade-in-out
 ```
 
 ## Example usage
+[Example snack][example-snack-url]
 ```jsx
-import React, {Component} from 'react';
+import React, { useState } from "react";
 import {Button, Text, StyleSheet, View} from 'react-native';
 import FadeInOut from 'react-native-fade-in-out';
 
-export default class App extends Component {
-  state = {
-    visible: true
-  };
+const App = () => {
+  const [visible, setVisible] = useState(true);
 
-  toggleVisible = () => {
-    this.setState(prevState => ({visible: !prevState.visible}));
+  const toggleVisible = () => {
+    setVisible(!visible);
   }
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <FadeInOut visible={this.state.visible}>
-          <Text>Fading Text</Text>
-        </FadeInOut>
-        <Button onPress={this.toggleVisible} title="Start Fade" />
-      </View>
-    );
-  }
+  return (
+    <View style={styles.container}>
+      <FadeInOut visible={visible}>
+        <Text>Default duration</Text>
+      </FadeInOut>
+      <FadeInOut visible={visible} duration={1000}>
+        <Text>Duration = 100</Text>
+      </FadeInOut>
+      <FadeInOut visible={visible} rotate={true}>
+        <Text>Rotate</Text>
+      </FadeInOut>
+      <FadeInOut visible={visible} scale={true}>
+        <Text>Scale</Text>
+      </FadeInOut>
+      <Button onPress={toggleVisible} title="Start Fade" />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -49,6 +55,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
 });
+
+export default App;
 
 ```
 For an example that uses the optional props, see the FadeInOutExample project in this repository.
@@ -109,6 +117,8 @@ MIT © [Courtney Pattison][courtney-url]
 [codecov-url]: https://codecov.io/gh/courtneypattison/react-native-fade-in-out
 
 [courtney-url]: https://courtneypattison.com/
+
+[example-snack-url]: https://snack.expo.io/@courtneypattison/react-native-fade-in-out-example
 
 [fade-in-out-img]: https://raw.githubusercontent.com/courtneypattison/react-native-fade-in-out/master/src/images/FadeInOut.gif
 
