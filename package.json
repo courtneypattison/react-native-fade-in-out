@@ -2,14 +2,13 @@
   "name": "react-native-fade-in-out",
   "version": "1.0.4",
   "description": "A React Native component that uses a boolean prop to fade children in and out",
-  "main": "FadeInOut.js",
+  "main": "/src/index",
   "repository": "https://github.com/courtneypattison/react-native-fade-in-out.git",
   "bugs": "https://github.com/courtneypattison/react-native-fade-in-out/issues",
   "author": "courtneypattison <courtneyp@ttison.ca> (https://courtneypattison.com/)",
   "license": "MIT",
   "files": [
-    "/FadeInOut.js",
-    "/FadeInOut.d.ts"
+    "/src/index"
   ],
   "keywords": [
     "fade",
@@ -23,6 +22,11 @@
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@types/enzyme": "^3.10.8",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.0",
+    "@types/react-native": "^0.63.45",
+    "@types/react-test-renderer": "^17.0.0",
     "babel-jest": "^24.9.0",
     "codecov": "^3.5.0",
     "enzyme": "^3.10.0",
@@ -33,7 +37,8 @@
     "metro-react-native-babel-preset": "^0.56.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-native": "^0.60.5"
+    "react-native": "^0.60.5",
+    "typescript": "^4.1.3"
   },
   "peerDependencies": {
     "react": "*",

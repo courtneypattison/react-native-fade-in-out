@@ -110,7 +110,7 @@ MIT © [Courtney Pattison][courtney-url]
 
 [courtney-url]: https://courtneypattison.com/
 
-[fade-in-out-img]: https://raw.githubusercontent.com/courtneypattison/react-native-fade-in-out/master/FadeInOut.gif
+[fade-in-out-img]: https://raw.githubusercontent.com/courtneypattison/react-native-fade-in-out/master/src/images/FadeInOut.gif
 
 [npm-home-url]: https://www.npmjs.com/
 [npm-img]: https://img.shields.io/npm/v/react-native-fade-in-out.svg

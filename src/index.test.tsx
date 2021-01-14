@@ -1,17 +1,18 @@
+import React from "react";
 import {Animated} from 'react-native';
 import {mount, shallow} from 'enzyme';
 
-import FadeInOut from './FadeInOut';
+import FadeInOut, { FadeInOutProps } from '.';
 
-function getComponent(props = {}) {
+function getComponent(props = {visible: true}) {
   return (<FadeInOut {...props}></FadeInOut>);
 }
 
-function getShallowWrapper(props = {}) {
+function getShallowWrapper(props: FadeInOutProps) {
   return shallow(getComponent(props));
 }
 
-function getMountedWrapper(props = {}) {
+function getMountedWrapper(props: FadeInOutProps) {
   return mount(getComponent(props));
 }
 
@@ -33,13 +34,16 @@ describe('FadeInOut', () => {
   it('should change opacity from 1 to 0', () => {
     jest.useFakeTimers();
     let wrapper = getMountedWrapper({visible: true});
+    let opacity = wrapper.find('AnimatedComponent')?.prop('style')?.opacity as any;
     
-    expect(wrapper.find('AnimatedComponent').prop('style').opacity._value).toEqual(1);
+    expect(opacity._value).toEqual(1);
     
     wrapper.setProps({visible: false});
     jest.runAllTimers();
     
-    expect(wrapper.find('AnimatedComponent').prop('style').opacity._value).toEqual(0);
+    opacity = wrapper.find('AnimatedComponent')?.prop('style')?.opacity as any;
+
+    expect(opacity._value).toEqual(0);
   });
 
   it('should not change opacity when props stay the same', () => {

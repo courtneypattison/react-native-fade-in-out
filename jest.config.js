@@ -8,6 +8,7 @@ module.exports = {
     "lcov",
     "text-summary"
   ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   modulePathIgnorePatterns: ["<rootDir>/FadeInOutExample/"],
   preset: "react-native",
   setupFilesAfterEnv: [
