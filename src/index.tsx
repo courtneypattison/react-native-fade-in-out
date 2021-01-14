@@ -14,7 +14,15 @@ export interface FadeInOutProps {
   useNativeDriver?: boolean;
 }
 
-const FadeInOut = ({children, visible, duration = DEFAULT_DURATION, rotate, scale, style, useNativeDriver = true}: FadeInOutProps) => {
+const FadeInOut = ({
+  children,
+  visible,
+  duration = DEFAULT_DURATION,
+  rotate,
+  scale,
+  style,
+  useNativeDriver = true,
+}: FadeInOutProps) => {
   const fadeAnim = useRef(new Animated.Value(visible ? 1 : 0)).current;
 
   useEffect(() => {
