@@ -12,11 +12,7 @@ exports[`FadeInOut should render {opacity: 0} 1`] = `
       ],
     }
   }
->
-  <Text>
-    Dummy Text
-  </Text>
-</AnimatedComponent>
+/>
 `;
 
 exports[`FadeInOut should render {opacity: 1} 1`] = `
@@ -31,11 +27,7 @@ exports[`FadeInOut should render {opacity: 1} 1`] = `
       ],
     }
   }
->
-  <Text>
-    Dummy Text
-  </Text>
-</AnimatedComponent>
+/>
 `;
 
 exports[`FadeInOut should render transform with perspective, scale, and rotate 1`] = `
@@ -56,9 +48,5 @@ exports[`FadeInOut should render transform with perspective, scale, and rotate 1
       ],
     }
   }
->
-  <Text>
-    Dummy Text
-  </Text>
-</AnimatedComponent>
+/>
 `;
