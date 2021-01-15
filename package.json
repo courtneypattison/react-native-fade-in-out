@@ -20,7 +20,7 @@
   "scripts": {
     "prepublish": "tsc",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage -u"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
