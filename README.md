@@ -100,14 +100,14 @@ Adds scaling from %0 to %100 on fade in and %100 to %0 on fade out.
 | [View styles][view-styles-url]| No       |
 
 ### `useNativeDriver`
-By default, we use the native driver for opacity and transform animations. If for some reason
-you need to turn this off, you can do so with this property. The default value is `true`.
+Sets useNativeDriver for the animation. The default value is `true`. See [React Native blog post][react-native-blog] for more details.
 
 | Type       | Required |
 |:-----------|----------|
 | Boolean    | No       |
 
-See [React Native Native Driver blog post][react-native-blog] for more details.
+## Typescript
+This package contains built-in TypeScript declarations.
 
 ## License
 
