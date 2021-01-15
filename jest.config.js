@@ -12,7 +12,7 @@ module.exports = {
   modulePathIgnorePatterns: ["<rootDir>/FadeInOutExample/"],
   preset: "react-native",
   setupFilesAfterEnv: [
-    "<rootDir>/setupTests.js",
+    "<rootDir>/setupTests.ts",
     "<rootDir>/node_modules/jest-enzyme/lib/index.js"
   ],
   snapshotSerializers: ["enzyme-to-json/serializer"],
