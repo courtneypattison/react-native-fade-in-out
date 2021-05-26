@@ -2,15 +2,15 @@
   "name": "react-native-fade-in-out",
   "version": "1.0.5",
   "description": "A React Native component that uses a boolean prop to fade children in and out",
-  "main": "/dist/src/index.js",
-  "types": "/dist/src/index.d.ts",
+  "main": "/index.js",
+  "types": "/index.d.ts",
   "repository": "https://github.com/courtneypattison/react-native-fade-in-out.git",
   "bugs": "https://github.com/courtneypattison/react-native-fade-in-out/issues",
   "author": "courtneypattison <courtneyp@ttison.ca> (https://courtneypattison.com/)",
   "license": "MIT",
   "files": [
-    "/dist/src/index",
-    "/dist/src/index.d.ts"
+    "/index.js",
+    "/index.d.ts"
   ],
   "keywords": [
     "fade",
