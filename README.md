@@ -1,4 +1,4 @@
-[![Build Status][travis-img]][travis-url] [![Coverage Status][codecov-img]][codecov-url] [![NPM Version][npm-img]][npm-url]
+[![Coverage Status][codecov-img]][codecov-url] [![NPM Version][npm-img]][npm-url]
 
 # [react-native][react-native-url]-fade-in-out
 
@@ -128,9 +128,6 @@ MIT © [Courtney Pattison][courtney-url]
 
 [react-native-blog]: https://reactnative.dev/blog/2017/02/14/using-native-driver-for-animated#caveats
 [react-native-url]: https://facebook.github.io/react-native/
-
-[travis-img]: https://img.shields.io/travis/courtneypattison/react-native-fade-in-out.svg
-[travis-url]: https://travis-ci.org/courtneypattison/react-native-fade-in-out
 
 [view-styles-url]: https://facebook.github.io/react-native/docs/view-style-props
 
